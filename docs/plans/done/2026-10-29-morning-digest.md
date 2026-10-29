@@ -1,8 +1,9 @@
 ---
 plan: morning-digest
-status: ready
+status: done
 owner: rook
 opened: 2026-10-29
+closed: 2026-10-29
 ---
 
 # Morning digest
@@ -77,3 +78,22 @@ page again with `LANE_MARKER` unset (the banner reads "no marker set") and uploa
 link. Move this plan to `docs/plans/done/` with its issue list.
 
 Done when: the preview link no longer shows the lane marker.
+
+## Issues
+
+| # | Issue | Blocked by | Worker | Closed |
+|---|-------|-----------|--------|--------|
+| [1](https://github.com/NickMcGinnis/mega-s01e04-before-i-looked/issues/1) | Run-log reader and shared digest contract | — | Codex · gpt-6-astra · high | 2026-10-29 |
+| [2](https://github.com/NickMcGinnis/mega-s01e04-before-i-looked/issues/2) | Digest HTML page: GET /digest/:night | #1 shared types | Codex · gpt-6-luna · high | 2026-10-29 |
+| [3](https://github.com/NickMcGinnis/mega-s01e04-before-i-looked/issues/3) | Digest JSON endpoint: GET /api/digest/:night | #1 shared types | Codex · gpt-6-luna · high | 2026-10-29 |
+| [4](https://github.com/NickMcGinnis/mega-s01e04-before-i-looked/issues/4) | Status board: digest links and nightly counts | #1 shared types | Codex · gpt-6-luna · high | 2026-10-29 |
+| [5](https://github.com/NickMcGinnis/mega-s01e04-before-i-looked/issues/5) | Digest route tests for success and edge cases | #1 shared types; routes for verification | Codex · GPT-6 · effort not exposed | 2026-10-29 |
+| [6](https://github.com/NickMcGinnis/mega-s01e04-before-i-looked/issues/6) | Export and submit public digest preview | #1–#5; reviewer must look before closure | Codex · GPT-6 · effort not exposed | 2026-10-29 |
+| [7](https://github.com/NickMcGinnis/mega-s01e04-before-i-looked/issues/7) | Remove preview marker after review and archive plan | #6 reviewed; human cleanup approval | Codex · GPT-6 · effort not exposed | 2026-10-29 |
+
+## Completion evidence
+
+- Integrated validation: 14 tests pass; TypeScript passes; both fixture nights render with identical HTML/JSON job order.
+- The course reviewer confirmed the preview was seen before review issue #6 was closed.
+- With human approval, exported again with `LANE_MARKER` unset and replaced the page at [the same public HTTPS link](https://mega-s01e04-before-i-looked.vercel.app). The banner reads "no marker set".
+- Supplied run-log fixtures remain unchanged. Previews and local course logs are outside this repository.
